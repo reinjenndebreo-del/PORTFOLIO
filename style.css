@@ -1,0 +1,470 @@
+/* ============================
+    GLOBAL STYLE
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0f1419;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    /* FIX 1: Padding para hindi dikit sa gilid */
+    padding: 0 20px; 
+}
+
+/* Base style for all major content sections (for consistent vertical spacing) */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #00d4ff;
+}
+
+/* ============================
+    NAVBAR
+=============================== */
+header {
+    padding: 20px 0;
+    background: #0f1419;
+    border-bottom: 1px solid #1b2733;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    color: #00d4ff;
+    font-weight: bold;
+    text-decoration: none !important;  
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #00d4ff;
+    cursor: pointer;
+}
+
+/* ============================
+    HERO
+=============================== */
+.hero {
+    padding: 130px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.highlight {
+    color: #00d4ff;
+}
+
+.hero-btns {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background: #00d4ff;
+    color: #0f1419;
+}
+
+.btn-primary:hover {
+    background: #00aecd;
+}
+
+.btn-outline {
+    border: 2px solid #00d4ff;
+    color: #00d4ff;
+}
+
+.btn-outline:hover {
+    background: #00d4ff;
+    color: #0f1419;
+}
+
+/* ============================
+    ABOUT SECTION (REVISED LIST STYLES)
+=============================== */
+
+/* Tanggalin ang dating .about-text li { list-style-type: none; } */
+
+.about-text ul {
+    /* Magdagdag ng padding-left para magkaroon ng space ang bullet point */
+    padding-left: 20px; 
+    margin-bottom: 20px;
+    list-style-type: disc; /* Ibalik ang default bullet point (circle) */
+}
+
+.about-text li {
+    margin-bottom: 10px;
+    text-align: justify; /* Panatilihin ang justify alignment sa text */
+}
+
+.about-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px; /* Dinagdagan ng konting space */
+
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skill {
+    display: inline-block;
+    background: #1a2332;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    border-left: 3px solid #00d4ff;
+}
+
+/* PROFILE IMAGE */
+.about-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00d4ff;    
+    box-shadow: 0 0 25px #00d4ff;  
+    background: #0f1419;
+}
+
+
+/* ============================
+    RESUME SECTION
+=============================== */
+.resume-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px; 
+}
+
+.resume-column h3 {
+    margin-bottom: 20px;
+    color: #00d4ff;
+}
+
+/* TIMELINE BASE */
+.timeline {
+    position: relative;
+    padding-left: 35px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #00d4ff;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Timeline Item Marker (The dot on the line) */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 8px; 
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #00d4ff; 
+    border-radius: 50%;
+    z-index: 1; 
+    border: 2px solid #0f1419; 
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #00d4ff;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+.timeline-content h5 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #9ccce0;
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #cccccc;
+    list-style-type: square;
+}
+
+/* SEPARATE LINES */
+.experience-timeline::before {
+    background: #00d4ff;
+}
+
+.education-timeline::before {
+    background: #00b7ff; 
+}
+
+
+/* ============================
+    GALLERY
+=============================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-grid .gallery-item {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.gallery-grid .gallery-item img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;    
+    box-shadow: 0 0 20px #00d4ff;
+    object-fit: cover;
+}
+
+
+/* ============================
+    CONTACT SECTION (FIXED ALIGNMENT)
+=============================== */
+
+#contact {
+    padding: 80px 0; 
+}
+
+.contact-content {
+    /* FIX 2: Centering ang buong listahan */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; 
+    gap: 25px; 
+    margin-bottom: 25px; 
+    width: 100%; 
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: #00d4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 24px; 
+    color: #0f1419;
+    flex-shrink: 0;
+}
+
+/* FIX 3: Gawing Flex Container ang Text Block para pantay ang Icon sa dalawang linya */
+.contact-item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 0; 
+}
+
+.contact-item p {
+    font-weight: bold; /* Added bold for label */
+    margin-bottom: 2px; /* Binawasan para mas dikit sa link */
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+    FOOTER
+=============================== */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #1b2733;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #9ccce0;
+}
+
+/* ============================
+    RESPONSIVE STYLES
+=============================== */
+@media (max-width: 900px) {
+
+    /* CONTAINER: Ensure mobile padding is consistent */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* NAVBAR */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0f1419;
+        position: absolute;
+        right: 15px;
+        top: 70px;
+        padding: 20px;
+        border: 1px solid #1b2733;
+        border-radius: 10px;
+        width: 200px;
+        text-align: right;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* ABOUT */
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 160px; 
+        height: 160px;
+    }
+
+    /* RESUME */
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    /* CONTACT */
+    .contact-content {
+        max-width: 90%;
+        margin: 0 auto; 
+    }
+
+    .contact-item {
+        margin-bottom: 20px; 
+        width: 100%;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    /* GALLERY */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
