@@ -228,20 +228,6 @@ header {
     position: relative;
 }
 
-/* Timeline Item Marker (The dot on the line) */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: 8px; 
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    background: #00d4ff; 
-    border-radius: 50%;
-    z-index: 1; 
-    border: 2px solid #0f1419; 
-}
-
 .timeline-date {
     font-weight: bold;
     color: #00d4ff;
@@ -467,4 +453,5 @@ footer {
     .hero h1 {
         font-size: 2rem;
     }
+
 }
